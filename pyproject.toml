@@ -1,0 +1,13 @@
+[project]
+name = "ecbs5293-hw02-python-environments-notebooks"
+version = "0.1.0"
+description = "ECBS5293 homework 2"
+requires-python = ">=3.10"
+dependencies = [
+    "ipykernel",
+]
+
+# CI only: `jupyter nbconvert --execute` runs the notebook headlessly in lab.toml's checks.
+# A non-default group, so a student's plain `uv sync` does not download it.
+[dependency-groups]
+ci = ["nbconvert"]
